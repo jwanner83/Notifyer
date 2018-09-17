@@ -1,0 +1,85 @@
+body, html {
+    font-family: Roboto,sans-serif;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.chat-wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    -ms-grid-rows: 1fr 50px;
+}
+
+.input-container {
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+.input {
+    display: none;
+}
+
+.input-container.Schnuppi {
+    display: grid;
+    grid-template-rows: 50px;
+    -ms-grid-rows: 50px;
+    grid-template-columns: 1fr auto;
+    -ms-grid-columns: 1fr auto;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 14px rgba(0,0,0,0.45);
+}
+
+.input-container.Schnuppi .input.Schnuppi {
+    border: none;
+    background-color: #fff;
+    margin: 0;
+    outline: none;
+    border-radius: 2px;
+    width: 100%;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.input-container.Schnuppi .button.Schnuppi {
+    border: none;
+    background-color: #fff;
+    outline: none;
+    border-radius: 2px;
+    height: 100%;
+    padding: 0 16px;
+    display: block;
+}
+
+.input-container.Betreuer {
+    display: grid;
+    grid-template-rows: 50px;
+    -ms-grid-rows: 50px;
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 14px rgba(0,0,0,0.45);
+}
+
+.input-container.Betreuer .button.Betreuer {
+    border: none;
+    background-color: #fff;
+    outline: none;
+    border-radius: 2px;
+    height: 100%;
+    padding: 0 16px;
+    text-align: center;
+    display: block;
+}

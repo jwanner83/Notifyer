@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Browser Tab Title -->
+    <title>Notifyer - Stay connected.</title>
+
+    <!-- Browser Tab Icon -->
+    <link rel="icon" href="https://upscore.ch/repo/icon/icon-w.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
+          integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
+    <!-- Viewport detection -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- CSS Browser reset -->
+    <link rel="stylesheet" href="https://upscore.ch/repo/css/reset.css">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- meta tags -->
+    <meta name="title" content="Notifyer - Stay connected.">
+    <meta name="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+
+    <meta property="og:url" content="https://upscore.ch">
+    <meta property="og:image" content="https://upscore.ch/repo/icon/icon-w.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="upscore">
+    <meta property="og:locale" content="de-CH">
+    <meta property="og:title" content="ch">
+    <meta property="og:description" content=" ">
+    <meta property="og:country-name" content="ch">
+
+    <meta itemprop="name" content="upscore">
+    <meta itemprop="image" content="https://upscore.ch/repo/icon/icon-w.png">
+    <meta itemprop="url" content="https://upscore.ch">
+    <meta itemprop="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+</head>
+
+<body>
+
+<section class="collector">
+        <h1 class="role-collector">Role</h1>
+        <input type="radio" name="role" value="Schnuppi"> Schnuppi<br>
+        <input type="radio" name="role" value="Betreuer"> Betreuer<br>
+        <h1 class="room-collector">Room</h1>
+        <input type="text" id="room">
+        <button onclick="getInfos();">Okay</button>
+</section>
+
+<div class="chat-wrapper">
+    <section id="message-container">
+
+    </section>
+
+    <form class="input-container" action="">
+        <input id="m" class="input Schnuppi" autocomplete="off"/>
+        <button class="button Schnuppi">Request Help</button>
+
+        <button class="button Betreuer">On Se Way</button>
+    </form>
+</div>
+
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+<script src="js/utils.js"></script>
+<script src="js/notify.js"></script>
+<script src="js/browser.js"></script>
+<script src="js/cookies.js"></script>
+<script src="code.js"></script>
+
+</body>
+</html>
