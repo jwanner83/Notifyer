@@ -41,28 +41,37 @@
 </head>
 
 <body>
+<section class="loading">
+    <img src="https://upscore.ch/repo/icon/icon-w.png">
+</section>
 
-<section class="collector">
+<section class="content">
+    <section class="logo">
+        <img src="https://upscore.ch/repo/icon/icon-w.png">
+    </section>
+
+    <section class="collector">
         <h1 class="role-collector">Role</h1>
         <input type="radio" name="role" value="Schnuppi"> Schnuppi<br>
         <input type="radio" name="role" value="Betreuer"> Betreuer<br>
         <h1 class="room-collector">Room</h1>
         <input type="text" id="room">
         <button onclick="getInfos();">Okay</button>
-</section>
-
-<div class="chat-wrapper">
-    <section id="message-container">
-
     </section>
 
-    <form class="input-container" action="">
-        <input id="m" class="input Schnuppi" autocomplete="off"/>
-        <button class="button Schnuppi">Request Help</button>
+    <div class="chat-wrapper">
+        <section id="message-container">
 
-        <button class="button Betreuer">On Se Way</button>
-    </form>
-</div>
+        </section>
+
+        <form class="input-container" action="">
+            <input id="m" class="input Schnuppi" autocomplete="off"/>
+            <button class="button Schnuppi">Request Help</button>
+
+            <button class="button Betreuer">On Se Way</button>
+        </form>
+    </div>
+</section>
 
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>

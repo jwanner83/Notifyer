@@ -16,8 +16,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Chatroom
 io.on('connection', function(socket){
     // when the client emits 'chat message', this listens and executes
-    socket.on('request help', function(msg, role, time, room){
-        console.log("help is requested: " + msg + ', ' + role + ', ' + time + ', ' + room)
-        io.emit('request help', msg, role, time, room)
+    socket.on('request help', function(msg, role, time, room, requestId, status){
+        console.log("help is requested: " + msg + ', ' + role + ', ' + time + ', ' + room + ', ' + requestId + ', ' + status)
+        io.emit('request help', msg, role, time, room, requestId, status)
     })
 })

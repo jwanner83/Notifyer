@@ -8,6 +8,55 @@ body, html {
     background-color: #fff;
 }
 
+.content {
+    display: none;
+}
+
+.collector {
+    display: none;
+    margin-top: 100px;
+    transition: 500ms;
+}
+
+.role-collector, .room-collector, .collector input, .collector button, .logo img {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 30px;
+    margin-top: 180px;
+    transition: 600ms;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.loading {
+    position: relative;
+    height: 100%;
+    display: none;
+    background-color: transparent;
+}
+
+.loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    width: 60px;
+}
+
+.loading .title {
+    font-weight: bold;
+    text-align: center;
+}
+
 .chat-wrapper {
     height: 100%;
     width: 100%;
@@ -82,4 +131,12 @@ body, html {
     padding: 0 16px;
     text-align: center;
     display: block;
+}
+
+.collector {
+    padding: 30px;
+}
+
+.collector h1 {
+    font-size: 40px;
 }
