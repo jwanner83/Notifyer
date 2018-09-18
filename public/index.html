@@ -46,25 +46,26 @@
 </section>
 
 <section class="content">
-    <section class="logo">
-        <img src="https://upscore.ch/repo/icon/icon-w.png">
-    </section>
-
     <section class="collector">
-        <h1 class="role-collector">Role</h1>
-        <span class="role-collector-radio-item-one">
-            <input id="role-radio" class="radio" type="radio" name="role" value="Schnuppi">
-            <label for="role-radio">Schnuppi</label>
-        </span>
+        <div class="role-collector">
+            <h1>Role</h1>
+            <span class="role-collector-radio-item-one">
+                <input id="role-radio" class="radio" type="radio" name="role" value="Schnuppi">
+                <label for="role-radio">Schnuppi</label>
+            </span>
 
-        <span class="role-collector-radio-item-two">
-            <input id="role-radio1" class="radio" type="radio" name="role" value="Betreuer">
-            <label for="role-radio1">Betreuer</label>
-        </span>
+            <span class="role-collector-radio-item-two">
+                <input id="role-radio1" class="radio" type="radio" name="role" value="Betreuer">
+                <label for="role-radio1">Betreuer</label>
+            </span>
+        </div>
 
-        <h1 class="room-collector">Room</h1>
-        <input type="text" id="room">
-        <button onclick="getInfos();">Okay</button>
+        <div class="room-collector">
+            <h1 class="room-collector">Room</h1>
+            <input type="text" id="room">
+        </div>
+
+        <button class="collect-button" onclick="getInfos();">Okay</button>
     </section>
 
     <div class="chat-wrapper">

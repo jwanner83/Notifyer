@@ -15,20 +15,14 @@ $(document).ready(function () {
     $(".loading").fadeIn();
 
     setTimeout(function () {
-        $(".loading").fadeOut();
+        $(".loading img").css({
+          "top": "25%",
+          "height": "80px",
+          "width": "80px"
+        })
 
-        setTimeout(function () {
-            $(".content").fadeIn();
-            $(".collector").fadeIn();
-            $(".role-collector").fadeIn();
-            $(".room-collector").fadeIn();
-            $(".collector input").fadeIn();
-            $(".collector button").fadeIn();
-            $(".logo img").fadeIn();
-            $(".collector").css("margin-top", "120px");
-            $(".logo").css("margin-top", "20px");
-        }, 300)
-    }, 1000)
+        $(".collector").fadeIn();
+    }, 700)
 })
 
 $(function () {
@@ -78,21 +72,26 @@ function getInfos() {
     room = $('#room').val()
 
     if (role === undefined) {
-        $('.role-collector').css("color", "red")
+        $('.role-collector h1').css("color", "red")
         if (room === "") {
-            $('.room-collector').css("color", "red")
+            $('.room-collector h1').css("color", "red")
         }
     } else {
         if (room === "") {
-            $('.room-collector').css("color", "red")
+            $('.room-collector h1').css("color", "red")
         } else {
             $(".input-container").addClass(role)
-            $(".collector").css("margin-top", "-100px");
-            $(".collector").fadeOut()
-          $(".role-collector").fadeOut()
-          $(".room-collector").fadeOut()
-          $(".collector input").fadeOut()
-          $(".collector button").fadeOut()
+
+            $(".loading img").css({
+              "top" : "0",
+              "right" : "0",
+              "transform" : "translate(200%, 27%)",
+              "height": "40px",
+              "width": "40px"
+            })
+
+            $(".collector").fadeOut();
+            $(".chat-wrapper").fadeIn();
         }
     }
 }

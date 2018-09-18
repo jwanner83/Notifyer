@@ -8,47 +8,14 @@ body, html {
     background-color: #fff;
 }
 
-.content {
-    display: none;
-}
-
-.collector {
-    display: none;
-    margin-top: 500px;
-    transition: 500ms;
-}
-
-.collector {
-    padding: 20px 30px;
-}
-
-.collector h1 {
-    font-size: 20px;
-}
-
-.role-collector, .room-collector, .collector input, .collector button, .logo img {
-    display: none;
-}
-
-.logo {
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    margin-top: 180px;
-    transition: 600ms;
-    transform: translate(-50%, 0);
-}
-
-.logo img {
-    width: 100px;
-    height: 100px;
-}
-
+/* Loading Overlay */
 .loading {
-    position: relative;
+    position: absolute;
     height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     display: none;
-    background-color: transparent;
 }
 
 .loading img {
@@ -58,18 +25,72 @@ body, html {
     transform: translate(-50%, -50%);
     height: 60px;
     width: 60px;
+    transition: 0.5s;
 }
 
-.loading .title {
-    font-weight: bold;
+/* Content */
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Information Collector */
+.collector {
+    display: none;
+    z-index: 100;
+    height: 100%;
+    margin: 70% 30px 30px;
+    position: relative;
+
+    /* For Animation */
+}
+
+.collector h1 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #bdbdbd;
+    margin: 10px 0;
+}
+
+.role-collector {
+    margin-bottom: 40px;
+}
+
+#room {
+    border: none;
+    border-bottom: #cfcfcf solid 1px;
+    background-color: transparent;
+    padding: 0 5px 5px 5px;
+    width: calc(100% - 10px);
+}
+
+.collect-button {
+    position: fixed;
     text-align: center;
+    padding: 5px;
+    width: calc(100% - 60px);
+    margin: 30px 0;
+    bottom: 0;
+    border: solid black 1px;
+    background-color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+/* Message Space */
+.chat-wrapper {
+    display: none;
 }
 
 .chat-wrapper {
     height: 100%;
     width: 100%;
     position: fixed;
-    display: grid;
     grid-template-rows: 1fr 50px;
     -ms-grid-rows: 1fr 50px;
 }
@@ -140,3 +161,82 @@ body, html {
     text-align: center;
     display: block;
 }
+
+#message-container {
+    height: calc(100% - 50px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.content {*/
+    /*display: none;*/
+/*}*/
+
+/*.collector {*/
+    /*display: none;*/
+    /*margin-top: 500px;*/
+    /*transition: 500ms;*/
+/*}*/
+
+/*.collector {*/
+    /*padding: 20px 30px;*/
+/*}*/
+
+/*.collector h1 {*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*.role-collector, .room-collector, .collector input, .collector button, .logo img {*/
+    /*display: none;*/
+/*}*/
+
+/*.logo {*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 5%;*/
+    /*margin-top: 180px;*/
+    /*transition: 600ms;*/
+    /*transform: translate(-50%, 0);*/
+/*}*/
+
+/*.logo img {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+/*}*/
+
+/*.loading {*/
+    /*position: relative;*/
+    /*height: 100%;*/
+    /*display: none;*/
+    /*background-color: transparent;*/
+/*}*/
+
+/*.loading img {*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*height: 60px;*/
+    /*width: 60px;*/
+/*}*/
+
+/*.loading .title {*/
+    /*font-weight: bold;*/
+    /*text-align: center;*/
+/*}*/
