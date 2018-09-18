@@ -10,6 +10,8 @@ var ar_room
 var ar_requestId
 var ar_status
 
+var notification
+
 $(document).ready(function () {
     checkIfRequestIsActive();
     $(".loading").fadeIn();
@@ -32,7 +34,7 @@ $(function () {
         if (role === "Schnuppi") {
             var message = $("#m")
             var newTime = new Date()
-            var time = newTime.getHours() + ':' + newTime.getMinutes() + ':' + newTime.getSeconds() + ':' + newTime.getMilliseconds()
+            var time = newTime.getHours() + ':' + newTime.getMinutes();
             var requestId = getRandomInt(1, 1000000000);
             var status = "new"
 
@@ -60,7 +62,35 @@ $(function () {
             ar_requestId = requestedId
             ar_status = requestStatus
 
-            $('#message-container').html("<p class='request'>Nachricht: " + requestMsg + "<br>Angefordert von: " + requestRole + "<br>Zeit: " + requestTime + "<br>Raum: " + requestRoom + "<br>ID: " + requestedId + "<br>Status: " + requestStatus + "</p>")
+            if (role === "Schnuppi") {
+              if (requestStatus === "new") {
+                $('#message-container').html("<div class='request s-new-request'><h1>Your request has been sent</h1></div>")
+              } else {
+                $('#message-container').html("<div class='request s-old-request'><h1>Help is on the way</h1></div>")
+              }
+            } else {
+              if (requestStatus === "new") {
+                $('#message-container').html("<div class='request b-new-request'><h1>Your Schnuppi needs Help!</h1><p>" + requestMsg + "</p>" + requestTime + "</div>")
+              } else {
+                $('#message-container').html("<div class='request b-old-request'><h1>You are on your way</h1></div>")
+              }
+            }
+
+            Notification.requestPermission().then(function(result) {
+                if (result === "granted") {
+                    if (requestStatus === "new") {
+                        if (role === "Betreuer") {
+                            let title = "Your Schnuppi needs help! " + requestMsg
+                            notification = new Notification(title, {body: "Request created: " + requestTime});
+                        }
+                    } else {
+                        if (role === "Schnuppi") {
+                            notification = new Notification('Wait a second!', {body: "Don't worry, help is on the way!"});
+                            setTimeout(notification.close.bind(notification), 10000);
+                        }
+                    }
+                }
+            });
 
             checkIfRequestIsActive();
         }
