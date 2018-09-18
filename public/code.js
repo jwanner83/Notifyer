@@ -25,6 +25,10 @@ $(document).ready(function () {
 
         $(".collector").fadeIn();
     }, 1200)
+
+    Notification.requestPermission().then(function(result) {
+      console.log(result);
+    });
 })
 
 $(function () {
