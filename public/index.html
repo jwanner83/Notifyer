@@ -52,8 +52,16 @@
 
     <section class="collector">
         <h1 class="role-collector">Role</h1>
-        <input type="radio" name="role" value="Schnuppi"> Schnuppi<br>
-        <input type="radio" name="role" value="Betreuer"> Betreuer<br>
+        <span class="role-collector-radio-item-one">
+            <input id="role-radio" class="radio" type="radio" name="role" value="Schnuppi">
+            <label for="role-radio">Schnuppi</label>
+        </span>
+
+        <span class="role-collector-radio-item-two">
+            <input id="role-radio1" class="radio" type="radio" name="role" value="Betreuer">
+            <label for="role-radio1">Betreuer</label>
+        </span>
+
         <h1 class="room-collector">Room</h1>
         <input type="text" id="room">
         <button onclick="getInfos();">Okay</button>
@@ -65,7 +73,7 @@
         </section>
 
         <form class="input-container" action="">
-            <input id="m" class="input Schnuppi" autocomplete="off"/>
+            <input placeholder="Help me..." id="m" class="input Schnuppi" autocomplete="off"/>
             <button class="button Schnuppi">Request Help</button>
 
             <button class="button Betreuer">On Se Way</button>

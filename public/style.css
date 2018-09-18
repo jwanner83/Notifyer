@@ -14,8 +14,16 @@ body, html {
 
 .collector {
     display: none;
-    margin-top: 100px;
+    margin-top: 500px;
     transition: 500ms;
+}
+
+.collector {
+    padding: 20px 30px;
+}
+
+.collector h1 {
+    font-size: 20px;
 }
 
 .role-collector, .room-collector, .collector input, .collector button, .logo img {
@@ -24,16 +32,16 @@ body, html {
 
 .logo {
     position: absolute;
-    right: 0;
-    top: 0;
-    margin: 30px;
+    left: 50%;
+    top: 5%;
     margin-top: 180px;
     transition: 600ms;
+    transform: translate(-50%, 0);
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
 }
 
 .loading {
@@ -131,12 +139,4 @@ body, html {
     padding: 0 16px;
     text-align: center;
     display: block;
-}
-
-.collector {
-    padding: 30px;
-}
-
-.collector h1 {
-    font-size: 40px;
 }

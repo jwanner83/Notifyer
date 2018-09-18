@@ -25,8 +25,8 @@ $(document).ready(function () {
             $(".collector input").fadeIn();
             $(".collector button").fadeIn();
             $(".logo img").fadeIn();
-            $(".collector").css("margin-top", "0");
-            $(".logo").css("margin-top", "30px");
+            $(".collector").css("margin-top", "120px");
+            $(".logo").css("margin-top", "20px");
         }, 300)
     }, 1000)
 })
@@ -87,7 +87,12 @@ function getInfos() {
             $('.room-collector').css("color", "red")
         } else {
             $(".input-container").addClass(role)
+            $(".collector").css("margin-top", "-100px");
             $(".collector").fadeOut()
+          $(".role-collector").fadeOut()
+          $(".room-collector").fadeOut()
+          $(".collector input").fadeOut()
+          $(".collector button").fadeOut()
         }
     }
 }
