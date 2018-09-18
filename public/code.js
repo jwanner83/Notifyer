@@ -24,7 +24,7 @@ $(document).ready(function () {
         })
 
         $(".collector").fadeIn();
-    }, 700)
+    }, 1200)
 })
 
 $(function () {
