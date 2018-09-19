@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Browser Tab Title -->
+  <title>Notifyer - Stay connected.</title>
+
+  <!-- Browser Tab Icon -->
+  <link rel="icon" href="https://upscore.ch/repo/icon/icon-w.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
+        integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
+  <!-- Viewport detection -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- CSS Browser reset -->
+  <link rel="stylesheet" href="https://upscore.ch/repo/css/reset.css">
+
+  <!-- CSS Styling -->
+  <link rel="stylesheet" href="new.css">
+
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+
+  <meta name="title" content="Notifyer - Stay connected.">
+  <meta name="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+
+  <meta property="og:url" content="https://upscore.ch">
+  <meta property="og:image" content="https://upscore.ch/repo/icon/icon-w.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="upscore">
+  <meta property="og:locale" content="de-CH">
+  <meta property="og:title" content="ch">
+  <meta property="og:description" content=" ">
+  <meta property="og:country-name" content="ch">
+
+  <meta itemprop="name" content="upscore">
+  <meta itemprop="image" content="https://upscore.ch/repo/icon/icon-w.png">
+  <meta itemprop="url" content="https://upscore.ch">
+  <meta itemprop="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+</head>
+<body>
+<section class="loading-overlay">
+  <img src="icon-w.png">
+</section>
+
+<section class="collector">
+  <div class="collector-logo-wrapper"></div>
+  <div class="notifyer-title">
+    <h1>Notifyer</h1>
+    <h4>Stay connected.</h4>
+  </div>
+
+  <div class="role-title">
+    <h2>Du bist ein...</h2>
+  </div>
+
+  <div class="role-collector">
+    <div class="role-item client">
+      <div onclick="setRole('schnuppi');" class="aligner">
+        <h3>Schnuppi</h3>
+      </div>
+    </div>
+    <div onclick="setRole('supporter');" class="role-item supporter">
+      <div class="aligner">
+        <h3>Betreuer</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="room-title">
+    <h2>Raum ID</h2>
+  </div>
+
+  <div class="room-collector">
+    <input placeholder="room id..." type="text" class="room-input">
+    <div onclick="setRoom();" class="room-button">
+      <div class="aligner">
+        <h3>Okay</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="new.js"></script>
+</body>
+</html>
