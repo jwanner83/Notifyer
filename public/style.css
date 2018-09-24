@@ -1,187 +1,55 @@
+@import "css/start-page.css";
+@import "css/collect.css";
+
+/* General */
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/GOTHIC.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic Bold';
+  src: url('fonts/GOTHICB.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic Italic';
+  src: url('fonts/GOTHICI.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic Bold Italic';
+  src: url('fonts/GOTHICBI.TTF') format('truetype');
+}
+
 body, html {
-    font-family: Roboto,sans-serif;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-    font-size: 13px;
-    background-color: #fff;
+  font-family: 'Century Gothic', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 10px;
 }
 
-/* Loading Overlay */
-.loading {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: none;
+* {
+  box-sizing: border-box;
 }
 
-.loading img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 60px;
-    width: 60px;
-    transition: 0.5s;
-    z-index: 10000;
+h1 {
+  font-size: 1.8rem;
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-weight: normal;
+  color: white;
 }
 
-/* Content */
-.content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+h3 {
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: white;
 }
 
-/* Information Collector */
-.collector {
-    display: none;
-    z-index: 100;
-    height: 100%;
-    margin: 70% 30px 30px;
-    position: relative;
-
-    /* For Animation */
-}
-
-.collector h1 {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #bdbdbd;
-    margin: 10px 0;
-}
-
-.role-collector {
-    margin-bottom: 20px;
-}
-
-#room {
-    border: none;
-    border-bottom: #cfcfcf solid 1px;
-    background-color: transparent;
-    padding: 0 5px 5px 5px;
-    width: calc(100% - 10px);
-}
-
-.collect-button {
-    position: fixed;
-    text-align: center;
-    padding: 5px;
-    width: calc(100% - 60px);
-    margin: 30px 0;
-    bottom: 0;
-    border: solid black 1px;
-    background-color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
-}
-
-/* Message Space */
-.chat-wrapper {
-    display: none;
-}
-
-.chat-wrapper {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    grid-template-rows: 1fr 50px;
-    -ms-grid-rows: 1fr 50px;
-}
-
-.input-container {
-    display: none;
-}
-
-.button {
-    display: none;
-}
-
-.input {
-    display: none;
-}
-
-.input-container.Schnuppi {
-    display: grid;
-    grid-template-rows: 50px;
-    -ms-grid-rows: 50px;
-    grid-template-columns: 1fr auto;
-    -ms-grid-columns: 1fr auto;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 0 14px rgba(0,0,0,0.45);
-}
-
-.input-container.Schnuppi .input.Schnuppi {
-    border: none;
-    background-color: #fff;
-    margin: 0;
-    outline: none;
-    border-radius: 2px;
-    width: 100%;
-    padding: 8px 15px;
-    box-sizing: border-box;
-    display: block;
-}
-
-.input-container.Schnuppi .button.Schnuppi {
-    border: none;
-    background-color: #fff;
-    outline: none;
-    border-radius: 2px;
-    height: 100%;
-    padding: 0 16px;
-    display: block;
-}
-
-.input-container.Betreuer {
-    display: grid;
-    grid-template-rows: 50px;
-    -ms-grid-rows: 50px;
-    grid-template-columns: 1fr;
-    -ms-grid-columns: 1fr;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 0 14px rgba(0,0,0,0.45);
-}
-
-.input-container.Betreuer .button.Betreuer {
-    border: none;
-    background-color: #fff;
-    outline: none;
-    border-radius: 2px;
-    height: 100%;
-    padding: 0 16px;
-    text-align: center;
-    display: block;
-}
-
-#message-container {
-    height: calc(100% - 50px);
-}
-
-/* request */
-.request {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
-.request h1 {
-    padding-top: 55%;
-}
-
-.s-new-request, .b-new-request {
-    background-color: orange;
-}
-
-.s-old-request, .b-old-request {
-    background-color: green;
+h4 {
+  color: #646464;
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-weight: normal;
 }

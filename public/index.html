@@ -1,103 +1,64 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- Browser Tab Title -->
-    <title>Notifyer - Stay connected.</title>
+  <!-- Browser Tab Title -->
+  <title>Notifyer - Stay connected.</title>
 
-    <!-- Browser Tab Icon -->
-    <link rel="icon" href="https://upscore.ch/repo/icon/icon-w.png">
+  <!-- Browser Tab Icon -->
+  <link rel="icon" href="https://upscore.ch/repo/icon/icon-w.png">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
-          integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
+        integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
 
-    <!-- Viewport detection -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!-- Viewport detection -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <!-- CSS Browser reset -->
-    <link rel="stylesheet" href="https://upscore.ch/repo/css/reset.css">
+  <!-- CSS Browser reset -->
+  <link rel="stylesheet" href="https://upscore.ch/repo/css/reset.css">
 
-    <!-- CSS Styling -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="new.css">
+  <!-- CSS Styling -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- meta tags -->
-    <meta name="title" content="Notifyer - Stay connected.">
-    <meta name="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+  <!-- meta tags -->
+  <meta charset="UTF-8">
 
-    <meta property="og:url" content="https://upscore.ch">
-    <meta property="og:image" content="https://upscore.ch/repo/icon/icon-w.png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="upscore">
-    <meta property="og:locale" content="de-CH">
-    <meta property="og:title" content="ch">
-    <meta property="og:description" content=" ">
-    <meta property="og:country-name" content="ch">
+  <meta name="title" content="Notifyer - Stay connected.">
+  <meta name="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
 
-    <meta itemprop="name" content="upscore">
-    <meta itemprop="image" content="https://upscore.ch/repo/icon/icon-w.png">
-    <meta itemprop="url" content="https://upscore.ch">
-    <meta itemprop="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
+  <meta property="og:url" content="https://upscore.ch">
+  <meta property="og:image" content="https://upscore.ch/repo/icon/icon-w.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="upscore">
+  <meta property="og:locale" content="de-CH">
+  <meta property="og:title" content="ch">
+  <meta property="og:description" content=" ">
+  <meta property="og:country-name" content="ch">
+
+  <meta itemprop="name" content="upscore">
+  <meta itemprop="image" content="https://upscore.ch/repo/icon/icon-w.png">
+  <meta itemprop="url" content="https://upscore.ch">
+  <meta itemprop="description" content="Stay connected with your Schnupperlehrling and help whenever he needs your help.">
 </head>
-
 <body>
-<section class="loading">
-    <img src="https://upscore.ch/repo/icon/icon-w.png">
-</section>
 
-<section class="content">
-    <section class="collector-wrapper">
-        <div class="collector-logo"></div>
+<section class="collector">
+  <div class="top-icons">
+    <div class="back-button"></div>
+    <div class="upscore-logo"></div>
+  </div>
+  <div class="empty-space"></div>
+  <img class="notifyer-title" src="images/notifyer-title.png">
+  <div class="start-button">
+    <button onclick="start();">Let's Go</button>
+  </div>
 
-        <div class=""
-    </section>
-    <!--<section class="collector">
-        <div class="role-collector">
-            <h1>Role</h1>
-            <span class="role-collector-radio-item-one">
-                <input id="role-radio" class="radio" type="radio" name="role" value="Schnuppi">
-                <label for="role-radio">Schnuppi</label>
-            </span>
-
-            <span class="role-collector-radio-item-two">
-                <input id="role-radio1" class="radio" type="radio" name="role" value="Betreuer">
-                <label for="role-radio1">Betreuer</label>
-            </span>
-        </div>
-
-        <div class="room-collector">
-            <h1 class="room-collector">Room</h1>
-            <input type="text" id="room">
-        </div>
-
-        <button class="collect-button" onclick="getInfos();">Okay</button>
-    </section>-->
-
-    <div class="chat-wrapper">
-        <section id="message-container">
-
-        </section>
-
-        <form class="input-container" action="">
-            <input placeholder="Help me..." id="m" class="input Schnuppi" autocomplete="off"/>
-            <button class="button Schnuppi">Request Help</button>
-
-            <button class="button Betreuer">on the way</button>
-        </form>
-    </div>
+  <h1 class="collect-title">Connection</h1>
+  <
 </section>
 
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
-<script src="js/utils.js"></script>
-<script src="js/notify.js"></script>
-<script src="js/browser.js"></script>
-<script src="js/cookies.js"></script>
 <script src="code.js"></script>
-
 </body>
 </html>
