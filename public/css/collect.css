@@ -76,3 +76,12 @@
 .send-infos button:hover {
   background-color: #be3122;
 }
+
+button:disabled, button[disabled]{
+    background-color: #4c4c4c;
+    cursor: not-allowed;
+}
+
+button:disabled:hover, button[disabled]:hover {
+    background-color: #626262;
+}

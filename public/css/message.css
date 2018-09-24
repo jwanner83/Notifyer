@@ -1,0 +1,59 @@
+.message-wrapper {
+    display: none;
+    grid-template-rows: 5rem auto 4rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    grid-gap: 1rem;
+}
+
+.message-wrapper .empty-space, .message, .help-button {
+    grid-column: span 2;
+}
+
+.message-wrapper.supporter {
+    grid-template-columns: auto;
+}
+
+.message-wrapper.user {
+    grid-template-columns: auto 6rem;
+}
+
+.message-button, .message-input, .help-button {
+    display: none;
+    width: 100%;
+}
+
+.help-button button, .message-button button {
+    width: 100%;
+    height: 100%;
+    background-color: #E73827;
+    color: white;
+    font-family: 'Century Gothic Bold', sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.help-button button:hover, .message-button button:hover {
+    background-color: #be3122;
+}
+
+button:disabled, button[disabled]{
+    background-color: #4c4c4c;
+    cursor: not-allowed;
+}
+
+button:disabled:hover, button[disabled]:hover {
+    background-color: #626262;
+}
+
+.message-input {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0 0.6rem;
+    font-family: "Century Gothic", sans-serif;
+    transition: 0.3s;
+}
