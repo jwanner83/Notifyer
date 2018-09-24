@@ -1,22 +1,22 @@
 /* General */
 @font-face {
   font-family: 'Century Gothic';
-  src: url('GOTHIC.TTF') format('truetype');
+  src: url('fonts/GOTHIC.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Century Gothic Bold';
-  src: url('GOTHICB.TTF') format('truetype');
+  src: url('fonts/GOTHICB.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Century Gothic Italic';
-  src: url('GOTHICI.TTF') format('truetype');
+  src: url('fonts/GOTHICI.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Century Gothic Bold Italic';
-  src: url('GOTHICBI.TTF') format('truetype');
+  src: url('fonts/GOTHICBI.TTF') format('truetype');
 }
 
 body, html {
@@ -27,16 +27,22 @@ body, html {
   font-size: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 1.8rem;
   font-family: 'Century Gothic Bold', sans-serif;
   font-weight: normal;
+  color: white;
 }
 
 h3 {
   font-family: 'Century Gothic Bold', sans-serif;
   font-weight: normal;
   font-size: 1.4rem;
+  color: white;
 }
 
 h4 {
@@ -45,128 +51,36 @@ h4 {
   font-weight: normal;
 }
 
-/* Loading Overlay */
-.loading-overlay {
-  background-color: transparent;
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  display: none;
-}
-
-.loading-overlay img {
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Collector */
 .collector {
-  padding: 2rem;
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
-  grid-template-rows: 12rem min-content min-content 1fr;
-  display: none;
+  overflow: hidden;
 }
 
-.collector-logo-wrapper {
-  height: 12rem;
+.collector {
+  background: url("images/background.png") top;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 5rem auto min-content 4rem;
+  grid-gap: 2rem;
+  padding: 3rem;
+}
+
+.upscore-background-title {
+  position: absolute;
+}
+
+.collector .notifyer-title img {
+  width: 20rem;
+}
+
+.start-button button {
   width: 100%;
-  background: linear-gradient(19deg, #54e38b, #33a5fd);
-  background-size: 400% 400%;
-
-  animation: gradient-animation 11s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% { background-position: 0% 11% }
-  50% { background-position: 100% 90% }
-  100% { background-position: 0% 11% }
-}
-
-.notifyer-title {
-  margin: 1.8rem 0;
-}
-
-.role {
   height: 100%;
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.role-title, .room-title {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.role-collector {
-  height: 100%;
-  width: 100%;
-  font-size: 0;
-}
-
-.role-item {
-  width: calc(50% - 1rem);
-  height: 100%;
-  display: inline-block;
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-.role-item:hover {
-  background-color: black;
+  background-color: #E73827;
   color: white;
-}
-
-.aligner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.role-item .aligner h3 {
-  max-width: 100%;
-}
-
-.client {
-  margin-right: 1rem;
-}
-
-.supporter {
-  margin-left: 1rem;
-}
-
-.room-title {
-  display: none;
-}
-
-.room-collector {
-  display: none;
-  height: 100%;
-  width: 100%;
-  font-size: 0;
-}
-
-.room-input {
-  width: calc(100% - 2.2rem);
-  height:  calc(50% - 4rem);
-}
-
-.room-button {
-  cursor: pointer;
-  width: 100%;
-  height: 50%;
-  transition: 0.5s;
-}
-
-.room-button:hover {
-  background-color: black;
-  color: white;
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  border: none;
 }
