@@ -1,9 +1,13 @@
 let room;
 let role;
 
+$(document).ready(function () {
+    checkInput(".room-input");
+});
+
 function start() {
   $(".notifyer-title").css({
-    "margin-top" : "-100px",
+    "margin-top" : "-200px",
     "opacity" : "0"
   });
 
@@ -12,10 +16,28 @@ function start() {
   });
 
   setTimeout(function () {
+    $(".start").hide();
     $(".collector").addClass("collect");
-
-    $(".notifyer-title-small").css({
-      "margin-bottom" : "0",
-    });
+    $(".form").fadeIn();
+    $(".form").css("display", "grid");
   }, 500)
+}
+
+function setRole(roleSet) {
+    role = roleSet;
+
+    $(".role-item").removeClass("active");
+    $("#" + role).addClass("active");
+}
+
+$('.room-input').on("input", function () {
+    checkInput(".room-input");
+});
+
+function checkInput(inputclass) {
+  if($(inputclass).val()) {
+      $(inputclass).addClass("active");
+  } else {
+      $(inputclass).removeClass("active");
+  }
 }

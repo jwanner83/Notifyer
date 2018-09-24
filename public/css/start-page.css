@@ -1,4 +1,4 @@
-.collector {
+.collector, .start, .form {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -7,10 +7,13 @@
 .collector {
   background: url("../images/background.png") top;
   background-size: cover;
+  padding: 3rem;
+}
+
+.start {
   display: grid;
   grid-template-rows: 5rem auto min-content 4rem;
   grid-gap: 2rem;
-  padding: 3rem;
 }
 
 .upscore-background-title {
@@ -39,5 +42,5 @@
 }
 
 .start-button button:hover {
-  background-color: #cb3525;
+  background-color: #be3122;
 }

@@ -43,18 +43,36 @@
 <body>
 
 <section class="collector">
-  <div class="top-icons">
-    <div class="back-button"></div>
-    <div class="upscore-logo"></div>
-  </div>
-  <div class="empty-space"></div>
-  <img class="notifyer-title" src="images/notifyer-title.png">
-  <div class="start-button">
-    <button onclick="start();">Let's Go</button>
-  </div>
+  <section class="start">
+    <div class="top-icons">
+      <div class="back-button"></div>
+      <div class="upscore-logo"></div>
+    </div>
+    <div class="empty-space"></div>
+    <img class="notifyer-title" src="images/notifyer-title.png">
+    <div class="start-button">
+      <button onclick="start();">Let's Go</button>
+    </div>
+  </section>
 
-  <h1 class="collect-title">Connection</h1>
-  <
+  <section class="form">
+    <h1>Connection</h1>
+
+    <h2>Role</h2>
+    <div id="supporter" onclick="setRole('supporter');" class="role-item"><p>Supporter</p></div>
+    <div id="user" onclick="setRole('user');" class="role-item"><p>User</p></div>
+
+    <div class="empty-space"></div>
+
+    <h2>Room</h2>
+    <input type="text" class="room-input">
+
+    <div class="empty-space"></div>
+
+    <div class="send-infos">
+      <button onclick="start();">Dive Right In!</button>
+    </div>
+  </section>
 </section>
 
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
