@@ -79,19 +79,20 @@
 
     <div class="message"></div>
 
-    <input type="text" class="message-input">
-    <div class="message-button">
-      <button onclick="sendMessage();">Help</button>
+    <input id="message" placeholder="Help me..." type="text" class="message-input">
+    <div class="message-button form-button">
+      <button>Help</button>
     </div>
 
-    <div class="help-button">
-      <button onclick="sendHelp();">Help</button>
+    <div class="help-button form-button">
+      <button disabled="disabled">Help</button>
     </div>
   </section>
 </section>
 
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="js/utils.js"></script>
 <script src="code.js"></script>
 </body>
 </html>
