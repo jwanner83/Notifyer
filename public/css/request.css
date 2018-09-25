@@ -1,0 +1,30 @@
+.request {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+}
+
+.b-new-request .text {
+    text-align: center;
+    width: 100%;
+    color: black;
+}
+
+.request h1 {
+    color: black;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.text p {
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.text {
+    font-size: 1.3rem;
+}

@@ -1,9 +1,15 @@
 .message-wrapper {
     display: none;
-    grid-template-rows: 5rem auto 4rem;
+    grid-template-rows: auto 4rem;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    grid-row-gap: 2rem;
+}
+
+.form-button, .message-input {
+    opacity: 0;
+    transition: 1s;
 }
 
 .message-wrapper .empty-space, .message, .help-button {
@@ -59,5 +65,5 @@ button:disabled:hover, button[disabled]:hover {
 }
 
 .message-button {
-    width: 6rem;
+    width: 8rem;
 }

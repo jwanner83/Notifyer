@@ -53,8 +53,15 @@ function startConnection() {
 
   checkIfRequestIsActive();
 
-  $(".message-wrapper").fadeIn();
-  $(".message-wrapper").css("display", "grid");
+  $(".message-wrapper").css({
+      "display" : "grid"
+  });
+
+  setTimeout(function () {
+      $(".form-button, .message-input").css({
+          "opacity" : "1"
+      });
+  }, 500);
 
   if (role === "user") {
     $(".message-input").fadeIn();
@@ -137,8 +144,8 @@ $(function () {
       } else {
         if (requestStatus === "new") {
           $('.message').html(
-            "<div class='request b-new-request'><h1>Your Schnuppi needs Help!</h1><p>" + requestMsg + "</p>"
-            + requestTime + "</div>")
+            "<div class='request b-new-request'><div class='text'><h1>Your User needs Help!</h1><p>" + requestMsg + "</p>"
+            + requestTime + "</div></div>")
         } else {
           $('.message').html("<div class='request b-old-request'><h1>You are on your way</h1></div>")
         }
@@ -148,7 +155,7 @@ $(function () {
         if (result === "granted") {
           if (requestStatus === "new") {
             if (role === "supporter") {
-              let title = "Your Schnuppi needs help! " + requestMsg
+              let title = "Your User needs help! " + requestMsg
               notification = new Notification(title, {body: "Request created: " + requestTime});
             }
           } else {
@@ -179,7 +186,7 @@ function checkIfRequestIsActive() {
     $(".message-button button").attr('disabled', 'disabled');
 
     setTimeout(function () {
-      $(".request").remove()
+      $(".request").fadeOut()
       requestIsActive = false
       ar_message = undefined
       ar_role = undefined
