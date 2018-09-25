@@ -1,0 +1,87 @@
+.form {
+  display: none;
+  grid-template-rows: 5rem 2rem min-content 0rem 2rem min-content auto 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.form h1 {
+  font-size: 3rem;
+}
+
+.form .empty-space, .form h2, .form h1, .form input, .send-infos {
+  grid-column: span 2;
+}
+
+.form .role-item {
+  color: #7B7B7B;
+  background-color: #7B7B7B;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.form .role-item p {
+  text-align: center;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.form .role-item:hover {
+  background-color: #BE3122;
+}
+
+.form .role-item:active, .form .role-item.active {
+  border: 2px solid #E73827;
+  background-color: #E73827;
+}
+
+.form .room-input {
+  background-color: #7B7B7B;
+  color: white;
+  height: 3rem;
+  border: none;
+  padding: 0 0.6rem;
+  font-family: "Century Gothic", sans-serif;
+  transition: 0.3s;
+}
+
+.form .room-input.active {
+  background-color: #E73827;
+}
+
+.send-infos button {
+  width: 100%;
+  height: 100%;
+  background-color: #E73827;
+  color: white;
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.send-infos button:hover {
+  background-color: #be3122;
+}
+
+button:disabled, button[disabled]{
+    background-color: #4c4c4c;
+    cursor: not-allowed;
+}
+
+button:disabled:hover, button[disabled]:hover {
+    background-color: #626262;
+}
